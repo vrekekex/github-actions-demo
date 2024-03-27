@@ -5,4 +5,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: hello world
+    - run: echo "hello world"
