@@ -1,9 +1,12 @@
 name: CI
-on: [push, workflow_dispatch]
-env:
-  env_var: ${{ secrets.MY_GITHUB_TOKEN }}
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch: {}
 jobs:
-  test:
+  checkout-test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ env.env_var }}
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - run: ls -la
