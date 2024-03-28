@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: ['master']
+    branches: [‘master’]
   workflow_dispatch: {}
 jobs:
   checkout-test:
@@ -9,4 +9,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    - run: ls -la
+    - uses: actions/setup-node@v1
+    - run: npm install
+    - run: npm test
