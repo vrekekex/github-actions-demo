@@ -1,13 +1,9 @@
 name: CI
 on: [push, workflow_dispatch]
 env:
-  env_var: ${{ vars.REPO_VAR }}
+  env_var: ${{ secrets.MY_GITHUB_TOKEN }}
 jobs:
   test:
-    env:
-      env_var: “This is a job var”
     runs-on: ubuntu-latest
     steps:
     - run: echo ${{ env.env_var }}
-      env:
-        env_var: “This is a step var”
