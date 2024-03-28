@@ -1,8 +1,9 @@
 name: CI
-on: [push, workflow_dispatch]
-
+on: push
+env:
+env_var: ${{ vars.REPO_VAR }}
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "hello world"
+    - run: echo ${{ env.env_var }}
