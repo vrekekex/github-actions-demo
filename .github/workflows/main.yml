@@ -1,11 +1,11 @@
 name: CI
 on: push
 env:
-env_var: ${{ vars.REPO_VAR }}
+  env_var: ${{ vars.REPO_VAR }}
 jobs:
   test:
-  env:
-    env_var: “This is a job var”
-  runs-on: ubuntu-latest
-  steps:
-  - run: echo ${{ env.env_var }}
+    env:
+      env_var: “This is a job var”
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo ${{ env.env_var }}
