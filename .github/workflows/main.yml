@@ -1,5 +1,5 @@
 name: CI
-on: push
+on: [push, wokflow_dispatch]
 env:
   env_var: ${{ vars.REPO_VAR }}
 jobs:
