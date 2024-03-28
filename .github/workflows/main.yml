@@ -1,5 +1,5 @@
 name: CI
-on: [push, wokflow_dispatch]
+on: [push, workflow_dispatch]
 env:
   env_var: ${{ vars.REPO_VAR }}
 jobs:
