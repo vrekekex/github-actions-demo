@@ -10,5 +10,5 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - uses: actions/setup-node@v1
-    - run: ./prepare.sh
-    - run: ./test.sh
+    - run: bash ./.github/scripts/prepare.sh
+    - run: bash ./.github/scripts/test.sh
