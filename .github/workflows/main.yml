@@ -1,24 +1,6 @@
 name: CI
 on:
   push:
-    branches: ['master']
-  workflow_dispatch: {}
-jobs:
-  checkout-test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    - uses: actions/setup-node@v1
-    - run: bash ./.github/scripts/prepare.sh
-    - run: bash ./.github/scripts/test.sh
-
-
-
-
-name: CI
-on:
-  push:
     branches: [‘master’]
   workflow_dispatch: {}
 env:
